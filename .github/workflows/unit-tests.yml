@@ -20,4 +20,4 @@ jobs:
 
       - name: Run tests
         working-directory: laboratories/cicd-documentation
-        run: python -m unittest test_tree.py
+        run: python -m unittest test_tree.py -v
