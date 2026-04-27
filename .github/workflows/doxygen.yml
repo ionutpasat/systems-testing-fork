@@ -21,12 +21,29 @@ jobs:
       - name: Generate Doxygen config and run
         shell: bash
         run: |
-          # generate a default Doxyfile and run doxygen
-          doxygen -g Doxyfile
+          cd laboratories/cicd-documentation
+          cat > Doxyfile <<'EOF'
+          PROJECT_NAME = "cicd-documentation"
+          OUTPUT_DIRECTORY = html
+          INPUT = .
+          FILE_PATTERNS = *.py
+          RECURSIVE = NO
+          EXTRACT_ALL = YES
+          EXTRACT_PRIVATE = YES
+          EXTRACT_STATIC = YES
+          QUIET = YES
+          GENERATE_LATEX = NO
+          GENERATE_TREEVIEW = YES
+          SOURCE_BROWSER = YES
+          INLINE_SOURCES = NO
+          STRIP_FROM_PATH = .
+          FULL_PATH_NAMES = NO
+          HAVE_DOT = NO
+          EOF
           doxygen Doxyfile
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
           name: doxygen-docs
-          path: html
+          path: laboratories/cicd-documentation/html
