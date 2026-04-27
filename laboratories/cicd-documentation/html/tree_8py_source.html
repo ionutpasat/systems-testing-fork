@@ -165,49 +165,75 @@ $(document).ready(function(){initNavTree('tree_8py_source.html',''); initResizab
 </div>
 <div class="foldopen" id="foldopen00056" data-start="" data-end="">
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#a15ec4c4d4d6377c9abc5a33c77fb7cc4">   56</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#a15ec4c4d4d6377c9abc5a33c77fb7cc4">_find</a>(self, data, node):</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">if</span> data == node.data:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">return</span> node</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">elif</span> (data &lt; node.data <span class="keywordflow">and</span> node.left <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>):</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> self.<a class="code hl_function" href="classtree_1_1Tree.html#a15ec4c4d4d6377c9abc5a33c77fb7cc4">_find</a>(data, node.left)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">elif</span> (data &gt; node.data <span class="keywordflow">and</span> node.right <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>):</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> self.<a class="code hl_function" href="classtree_1_1Tree.html#a15ec4c4d4d6377c9abc5a33c77fb7cc4">_find</a>(data, node.right)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="stringliteral">&quot;&quot;&quot;Find a node with the given data starting from a subtree.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="stringliteral">        Args:</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="stringliteral">            data (int): data to find</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="stringliteral">            node (Node): starting node for the search</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="stringliteral">        Returns:</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="stringliteral">            Node: node with the requested data, or None if not found</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> data == node.data:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> node</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">elif</span> (data &lt; node.data <span class="keywordflow">and</span> node.left <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>):</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> self.<a class="code hl_function" href="classtree_1_1Tree.html#a15ec4c4d4d6377c9abc5a33c77fb7cc4">_find</a>(data, node.left)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">elif</span> (data &gt; node.data <span class="keywordflow">and</span> node.right <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>):</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> self.<a class="code hl_function" href="classtree_1_1Tree.html#a15ec4c4d4d6377c9abc5a33c77fb7cc4">_find</a>(data, node.right)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 </div>
-<div class="foldopen" id="foldopen00064" data-start="" data-end="">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#a2e102f61f0ea74650da7264e03e41597">   64</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#a2e102f61f0ea74650da7264e03e41597">deleteTree</a>(self):</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        self.<a class="code hl_variable" href="classtree_1_1Tree.html#af113725032a5affae34a81564874dca5">root</a> = <span class="keywordtype">None</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-</div>
-<div class="foldopen" id="foldopen00067" data-start="" data-end="">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#adfaaa258d7167c80d47de321e85419d8">   67</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#adfaaa258d7167c80d47de321e85419d8">printTree</a>(self):</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> self.<a class="code hl_variable" href="classtree_1_1Tree.html#af113725032a5affae34a81564874dca5">root</a> <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(self.<a class="code hl_variable" href="classtree_1_1Tree.html#af113725032a5affae34a81564874dca5">root</a>)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-</div>
-<div class="foldopen" id="foldopen00071" data-start="" data-end="">
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">   71</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(self, node):</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> node <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(node.left)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            print(str(node.data) + <span class="stringliteral">&#39; &#39;</span>)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(node.right)</div>
+<div class="foldopen" id="foldopen00073" data-start="" data-end="">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#a2e102f61f0ea74650da7264e03e41597">   73</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#a2e102f61f0ea74650da7264e03e41597">deleteTree</a>(self):</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="stringliteral">&quot;&quot;&quot;Delete the entire tree by removing the root reference.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        self.<a class="code hl_variable" href="classtree_1_1Tree.html#af113725032a5affae34a81564874dca5">root</a> = <span class="keywordtype">None</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 </div>
 <div class="foldopen" id="foldopen00077" data-start="" data-end="">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">   77</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">_printPreorderTree</a>(self, node):</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> node <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            print(str(node.data) + <span class="stringliteral">&#39; &#39;</span>)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">_printPreorderTree</a>(node.left)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">_printPreorderTree</a>(node.right)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#adfaaa258d7167c80d47de321e85419d8">   77</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#adfaaa258d7167c80d47de321e85419d8">printTree</a>(self):</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="stringliteral">&quot;&quot;&quot;Print the tree contents using an inorder traversal.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> self.<a class="code hl_variable" href="classtree_1_1Tree.html#af113725032a5affae34a81564874dca5">root</a> <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(self.<a class="code hl_variable" href="classtree_1_1Tree.html#af113725032a5affae34a81564874dca5">root</a>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 </div>
-<div class="foldopen" id="foldopen00083" data-start="" data-end="">
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">   83</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">_printPostorderTree</a>(self, node):</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">if</span> node <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">_printPostorderTree</a>(node.left)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">_printPostorderTree</a>(node.right)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            print(str(node.data) + <span class="stringliteral">&#39; &#39;</span>)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="" data-end="">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">   82</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(self, node):</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="stringliteral">&quot;&quot;&quot;Print a subtree in inorder traversal order.</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="stringliteral">        Args:</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="stringliteral">            node (Node): current node being visited</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> node <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(node.left)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            print(str(node.data) + <span class="stringliteral">&#39; &#39;</span>)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">_printInorderTree</a>(node.right)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+</div>
+<div class="foldopen" id="foldopen00093" data-start="" data-end="">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">   93</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">_printPreorderTree</a>(self, node):</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="stringliteral">&quot;&quot;&quot;Print a subtree in preorder traversal order.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="stringliteral">        Args:</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="stringliteral">            node (Node): current node being visited</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> node <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            print(str(node.data) + <span class="stringliteral">&#39; &#39;</span>)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">_printPreorderTree</a>(node.left)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">_printPreorderTree</a>(node.right)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+</div>
+<div class="foldopen" id="foldopen00104" data-start="" data-end="">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">  104</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">_printPostorderTree</a>(self, node):</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="stringliteral">&quot;&quot;&quot;Print a subtree in postorder traversal order.</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="stringliteral">        Args:</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="stringliteral">            node (Node): current node being visited</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">if</span> node <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">_printPostorderTree</a>(node.left)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            self.<a class="code hl_function" href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">_printPostorderTree</a>(node.right)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            print(str(node.data) + <span class="stringliteral">&#39; &#39;</span>)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 </div>
 </div>
 <div class="ttc" id="aclassnode_1_1Node_html"><div class="ttname"><a href="classnode_1_1Node.html">node.Node</a></div><div class="ttdef"><b>Definition</b> <a href="node_8py_source.html#l00001">node.py:1</a></div></div>
@@ -215,15 +241,15 @@ $(document).ready(function(){initNavTree('tree_8py_source.html',''); initResizab
 <div class="ttc" id="aclasstree_1_1Tree_html_a15ec4c4d4d6377c9abc5a33c77fb7cc4"><div class="ttname"><a href="classtree_1_1Tree.html#a15ec4c4d4d6377c9abc5a33c77fb7cc4">tree.Tree._find</a></div><div class="ttdeci">_find(self, data, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00056">tree.py:56</a></div></div>
 <div class="ttc" id="aclasstree_1_1Tree_html_a162e6c3515f47c2e6eb5aadc3b8f3e85"><div class="ttname"><a href="classtree_1_1Tree.html#a162e6c3515f47c2e6eb5aadc3b8f3e85">tree.Tree._add</a></div><div class="ttdeci">_add(self, data, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00022">tree.py:22</a></div></div>
 <div class="ttc" id="aclasstree_1_1Tree_html_a2771580889b84268fb517d4c04f52a40"><div class="ttname"><a href="classtree_1_1Tree.html#a2771580889b84268fb517d4c04f52a40">tree.Tree.add</a></div><div class="ttdeci">add(self, data)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00015">tree.py:15</a></div></div>
-<div class="ttc" id="aclasstree_1_1Tree_html_a2e102f61f0ea74650da7264e03e41597"><div class="ttname"><a href="classtree_1_1Tree.html#a2e102f61f0ea74650da7264e03e41597">tree.Tree.deleteTree</a></div><div class="ttdeci">deleteTree(self)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00064">tree.py:64</a></div></div>
+<div class="ttc" id="aclasstree_1_1Tree_html_a2e102f61f0ea74650da7264e03e41597"><div class="ttname"><a href="classtree_1_1Tree.html#a2e102f61f0ea74650da7264e03e41597">tree.Tree.deleteTree</a></div><div class="ttdeci">deleteTree(self)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00073">tree.py:73</a></div></div>
 <div class="ttc" id="aclasstree_1_1Tree_html_a346c463a50c3a054b832cb8c2c9e326a"><div class="ttname"><a href="classtree_1_1Tree.html#a346c463a50c3a054b832cb8c2c9e326a">tree.Tree.getRoot</a></div><div class="ttdeci">getRoot(self)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00011">tree.py:11</a></div></div>
-<div class="ttc" id="aclasstree_1_1Tree_html_a7e08a0f1dd411c75e38387db594c76df"><div class="ttname"><a href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">tree.Tree._printPreorderTree</a></div><div class="ttdeci">_printPreorderTree(self, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00077">tree.py:77</a></div></div>
-<div class="ttc" id="aclasstree_1_1Tree_html_a9e47f28ef66087a03f2177a8cf46b64b"><div class="ttname"><a href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">tree.Tree._printPostorderTree</a></div><div class="ttdeci">_printPostorderTree(self, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00083">tree.py:83</a></div></div>
-<div class="ttc" id="aclasstree_1_1Tree_html_adfaaa258d7167c80d47de321e85419d8"><div class="ttname"><a href="classtree_1_1Tree.html#adfaaa258d7167c80d47de321e85419d8">tree.Tree.printTree</a></div><div class="ttdeci">printTree(self)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00067">tree.py:67</a></div></div>
+<div class="ttc" id="aclasstree_1_1Tree_html_a7e08a0f1dd411c75e38387db594c76df"><div class="ttname"><a href="classtree_1_1Tree.html#a7e08a0f1dd411c75e38387db594c76df">tree.Tree._printPreorderTree</a></div><div class="ttdeci">_printPreorderTree(self, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00093">tree.py:93</a></div></div>
+<div class="ttc" id="aclasstree_1_1Tree_html_a9e47f28ef66087a03f2177a8cf46b64b"><div class="ttname"><a href="classtree_1_1Tree.html#a9e47f28ef66087a03f2177a8cf46b64b">tree.Tree._printPostorderTree</a></div><div class="ttdeci">_printPostorderTree(self, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00104">tree.py:104</a></div></div>
+<div class="ttc" id="aclasstree_1_1Tree_html_adfaaa258d7167c80d47de321e85419d8"><div class="ttname"><a href="classtree_1_1Tree.html#adfaaa258d7167c80d47de321e85419d8">tree.Tree.printTree</a></div><div class="ttdeci">printTree(self)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00077">tree.py:77</a></div></div>
 <div class="ttc" id="aclasstree_1_1Tree_html_aecd57eab31564955c2c763fcef95168d"><div class="ttname"><a href="classtree_1_1Tree.html#aecd57eab31564955c2c763fcef95168d">tree.Tree.__init__</a></div><div class="ttdeci">__init__(self)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00007">tree.py:7</a></div></div>
 <div class="ttc" id="aclasstree_1_1Tree_html_af113725032a5affae34a81564874dca5"><div class="ttname"><a href="classtree_1_1Tree.html#af113725032a5affae34a81564874dca5">tree.Tree.root</a></div><div class="ttdeci">root</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00009">tree.py:9</a></div></div>
 <div class="ttc" id="aclasstree_1_1Tree_html_af4e6550c6ef0d4cfefb31f3639296de7"><div class="ttname"><a href="classtree_1_1Tree.html#af4e6550c6ef0d4cfefb31f3639296de7">tree.Tree.find</a></div><div class="ttdeci">find(self, data)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00042">tree.py:42</a></div></div>
-<div class="ttc" id="aclasstree_1_1Tree_html_afc4e336984756dc0da4b2af6cbd71596"><div class="ttname"><a href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">tree.Tree._printInorderTree</a></div><div class="ttdeci">_printInorderTree(self, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00071">tree.py:71</a></div></div>
+<div class="ttc" id="aclasstree_1_1Tree_html_afc4e336984756dc0da4b2af6cbd71596"><div class="ttname"><a href="classtree_1_1Tree.html#afc4e336984756dc0da4b2af6cbd71596">tree.Tree._printInorderTree</a></div><div class="ttdeci">_printInorderTree(self, node)</div><div class="ttdef"><b>Definition</b> <a href="tree_8py_source.html#l00082">tree.py:82</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
