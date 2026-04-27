@@ -2,6 +2,7 @@ import unittest
 
 from tree import Tree
 
+#test cases for tree.py
 class TreeTestCase(unittest.TestCase):
     def setUp(self):
         self.tree = Tree()
